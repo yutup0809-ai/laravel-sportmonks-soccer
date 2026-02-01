@@ -9,12 +9,12 @@ class Country extends SoccerAPIClient {
 
     public function all()
     {
-        return $this->callData('countries');
+        return $this->callData('core/countries');
     }
 
     public function byId($countryId)
     {
-        return $this->call('countries/' . $countryId);
+        return $this->call('core/countries/' . $countryId);
     }
 
 }

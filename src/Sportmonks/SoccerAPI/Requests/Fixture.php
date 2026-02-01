@@ -19,7 +19,7 @@ class Fixture extends SoccerAPIClient {
             $toDate = $toDate->format('Y-m-d');
         }
 
-        return $this->callData('fixtures/between/' . $fromDate . '/' .$toDate);
+        return $this->callData('football/fixtures/between/' . $fromDate . '/' .$toDate);
     }
 
     public function byDate($date)
@@ -29,12 +29,12 @@ class Fixture extends SoccerAPIClient {
             $date = $date->format('Y-m-d');
         }
 
-        return $this->callData('fixtures/date/' . $date);
+        return $this->callData('football/fixtures/date/' . $date);
     }
 
     public function byMatchId($id)
     {
-        return $this->call('fixtures/' . $id);
+        return $this->call('football/fixtures/' . $id);
     }
 
     public function headToHead($firstTeamId,$secondTeamId)
@@ -44,7 +44,7 @@ class Fixture extends SoccerAPIClient {
 
     public function multi($array)
     {
-        return $this->call('fixtures/multi/' . join(',', $array));
+        return $this->call('football/fixtures/multi/' . join(',', $array));
     }
 
 }

@@ -9,12 +9,12 @@ class Round extends SoccerAPIClient {
 
     public function byId($roundId)
     {
-        return $this->call('rounds/' . $roundId);
+        return $this->call('football/rounds/' . $roundId);
     }
 
     public function bySeasonId($seasonId)
     {
-        return $this->call('rounds/season/' . $seasonId);
+        return $this->call('football/rounds/seasons/' . $seasonId);
     }
 
 }

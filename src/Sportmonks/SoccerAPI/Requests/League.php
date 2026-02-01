@@ -8,12 +8,12 @@ class League extends SoccerAPIClient {
 
     public function all()
     {
-        return $this->callData('leagues');
+        return $this->callData('football/leagues');
     }
 
     public function byId($competitionId)
     {
-        return $this->call('leagues/' . $competitionId);
+        return $this->call('football/leagues/' . $competitionId);
     }
 
 }
